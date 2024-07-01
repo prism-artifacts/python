@@ -6,7 +6,8 @@ RUN install_packages libxml2-dev libxslt1-dev antiword \
     sox libjpeg-dev swig \
     && curl -sSL https://pdm-project.org/install-pdm.py | python3 -
 
-ENV PATH="$PATH:$HOME/.local/bin"
+# Add pdm to PATH using RUN
+RUN echo 'export PATH="$PATH:$HOME/.local/bin"' >> /etc/bash.bashrc
 
 WORKDIR /app
 
