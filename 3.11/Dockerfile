@@ -1,3 +1,3 @@
-FROM bitnami/python:3.11
+FROM --platform=$TARGETPLATFORM bitnami/python:3.11
 
-CMD [ "python" ]
+CMD [ "python3" ]
