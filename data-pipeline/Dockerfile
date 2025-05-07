@@ -20,8 +20,7 @@
     # Download and link spaCy model (medium size to save space)
     RUN python -m spacy download en_core_web_md && \
         python -m spacy link en_core_web_md en_core_web_md
-    
-    ---
+
     
     # --- Stage 2: Runtime ---
     FROM python:3.12-slim AS runtime
