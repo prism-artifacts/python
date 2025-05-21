@@ -28,7 +28,7 @@
     COPY --from=builder /install /usr/local
     
     # Download spaCy model (since spacy is now available in /usr/local)
-    RUN python -m spacy download en_core_web_lg
+    # RUN python -m spacy download en_core_web_lg
     
     # Copy app code if needed
     # COPY . .
